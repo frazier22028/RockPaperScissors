@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styling.js">
+</head>
+<body>
+    <script> 
+    var userchoice = prompt("Rock Paper or Scissors"); 
+
+        function computerPlay(){
+          
+        let randNum = Math.ceil(Math.random()*3);
+        console.log(randNum);
+       if (randNum == 1) {
+         return("Rock");
+      } else if (randNum == 2) {
+         return("Paper");
+      } else {
+          return("Scissors"); 
+      }
+ 
+      }
+     
+    let computerChoice = computerPlay();
+  console.log(computerChoice);
+
+ function singleRound(playerSelection, computerSelection){
+    if(playerSelection == computerSelection){
+      return "This match ends in a Draw";
+    }else if(playerSelection == "Rock" && computerSelection == "Scissors"){
+      return 'You win!';
+    }else if(playerSelection == "Paper" && computerSelection == "Rock"){
+      return 'You win!';
+    }else (playerSelection == "Scissors" && computerSelection == "Paper");
+      return 'You win!';
+    }if(playerSelection == "Rock" && computerSelection == "Paper"){
+      return 'You lose!';
+    }else if(playerSelection == "Paper" && computerSelection == "Scissors"){
+      return 'You lose!';
+    }else (playerSelection == "Scissors" && computerSelection == "Rock");
+      return 'You lose!';
+    
+    
+    }
+    
+  }
+
+  
+   
+  
+ playerChoice = "Rock"
+ computerChoice = computerPlay();
+ console.log(singleRound(playerChoice,computerChoice));
+
+    </script>
+</body>
+</html>
